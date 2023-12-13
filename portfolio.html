@@ -1,0 +1,163 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/d6002f0898.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, Am <span>Jobbu</span> <br> from Kenya</h1>
+                
+            </div>
+        </div>
+    </div>
+    <!-- About me -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>The purpose of your personal profile is to concisely present your skills, 
+                    qualities, work experience, and your career goals and ambitions. Consequently, 
+                    you can mention anything from the following categories when constructing your personal profile:</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="displayMe('skills')" >Skills</p>
+                        <p class="tab-links" onclick="displayMe('experience')">Experience</p>
+                        <p class="tab-links" onclick="displayMe('education')">Eductaion</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>DEsign Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Android Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents " id="experience">
+                        <ul>
+                            <li><span> 10th August - 2nd November 2018</span><br> Egerton University          
+                                Skills gained are basic wiring,
+                                <br>soldering and operation of basic                                                 
+                                Equipment in <br> electrical, mechanical, Agricultural <br> and civil
+                                engineering Workshops. </li>
+                                <li><span>1stSeptember - 4th December 2022</span><br> Njoro canning Factory Co Ltd.
+                                <br> I was exposed to various maintenance processes of electrical engineering and <br> 
+                                other sections i.e. 
+                                Mechanical engineering, electrical and control, operations </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>  
+                            <li><span>2016-Current</span><br> Egerton <University:br> 
+                            Bachelor of Science in Electrical and Control Engineering</University:br></li>
+                            <li><span>2012-2015</span><br>Kanyawanga High School: <br>
+                             Kenya Certificate of Secondary Education.  </li>
+                            <li><span>2001-2011</span><br> Nyarach Primary School. <br> Kenya Certificate of Primary Education. 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div id="services">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web DEsign</h2>
+                <p>we I offer high quality services</p>
+                <a href="">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX DEsign</h2>
+                <p>we I offer high quality services</p>
+                <a href="">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>App DEsign</h2>
+                <p>we I offer high quality services</p>
+                <a href="">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <!-- My Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1> 
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Social media App</h3>
+                        <p>Good quality</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>Good quality</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>Good quality</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- Javascript -->
+    <script>
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-contents");
+
+
+        function displayMe(tabname)
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+            for(content of tabcontents)
+            {
+                content.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+            
+        }
+        
+    </script>
+
+    
+</body>
+</html>
